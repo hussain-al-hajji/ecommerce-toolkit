@@ -34,24 +34,7 @@
   --font: "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
   --font-display: "Readex Pro", "IBM Plex Sans Arabic", system-ui, sans-serif;
   --wrap: 1200px;
-  --logo-accent: var(--accent);
-  --logo-ink: #fff;
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0C1413; --bg-2: #111C1A; --surface: #15211F; --ink: #EAF1EF; --ink-2: #C3CFCC; --muted: #8E9C99;
-    --line: #22312E; --line-2: #2E403C; --brand-50: #10221F; --brand-100: #16302B; --accent-100: #2B2213;
-    --tile: #FFFFFF;
-    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0C1413; --bg-2: #111C1A; --surface: #15211F; --ink: #EAF1EF; --ink-2: #C3CFCC; --muted: #8E9C99;
-  --line: #22312E; --line-2: #2E403C; --brand-50: #10221F; --brand-100: #16302B; --accent-100: #2B2213;
-  color-scheme: dark;
+  color-scheme: only light;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -102,11 +85,12 @@ main { outline: none; min-height: 60vh; }
 .topbar.scrolled { border-bottom-color: var(--line); }
 .topbar-in { display: flex; align-items: center; gap: 24px; height: 72px; }
 .brand { display: flex; align-items: center; gap: 10px; flex: none; }
-.brand-mark { color: var(--brand-700); display: inline-flex; }
-.logo-mark { width: 40px; height: 40px; }
+.brand-mark { display: inline-flex; }
+.logo-mark { width: 42px; height: 42px; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
-.brand-text strong { font-family: var(--font-display); font-size: 1.06rem; font-weight: 700; }
-.brand-text small { font-size: .7rem; color: var(--muted); letter-spacing: .06em; direction: ltr; text-align: right; }
+.brand-text strong { font-family: var(--font-display); font-size: 1.08rem; font-weight: 700; }
+.brand-text strong span { color: var(--brand-600); }
+.brand-text small { margin-top: 3px; font-size: .66rem; color: var(--muted); letter-spacing: .14em; text-transform: uppercase; direction: ltr; text-align: right; }
 .nav { display: flex; align-items: center; gap: 4px; margin-inline-start: 8px; }
 .nav a, .nav-btn { display: inline-flex; align-items: center; gap: 4px; padding: 8px 14px; border-radius: 999px; font-weight: 500; color: var(--ink-2); background: none; border: 0; font-size: .95rem; }
 .nav a:hover, .nav-btn:hover, .nav a.active, .nav-btn[aria-expanded="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow-sm); }
@@ -340,7 +324,8 @@ mark { background: var(--accent-100); color: inherit; border-radius: 3px; paddin
 
 /* ---------- التذييل ---------- */
 .footer { margin-top: 64px; background: var(--brand-900); color: rgba(255,255,255,.75); padding-block: 48px 28px; }
-.footer .brand-mark { color: #fff; }
+.footer .brand-mark { --logo-body: #fff; --logo-rim: #DCEFEA; --logo-cursor: var(--brand-800); }
+.footer .brand-text strong span { color: var(--accent); }
 .footer .brand-text small { color: rgba(255,255,255,.5); }
 .footer .brand-text strong { color: #fff; }
 .foot-grid { display: grid; grid-template-columns: 1.3fr 2fr; gap: 40px; }
@@ -383,7 +368,7 @@ mark { background: var(--accent-100); color: inherit; border-radius: 3px; paddin
 @media (max-width: 640px) {
   .wrap { padding-inline: 16px; }
   .topbar-in { height: 64px; gap: 12px; }
-  .logo-mark { width: 34px; height: 34px; }
+  .logo-mark { width: 36px; height: 36px; }
   .brand-text strong { font-size: .98rem; }
   .hide-sm { display: none; }
   .hero { padding-block: 32px 40px; }

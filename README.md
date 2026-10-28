@@ -21,7 +21,10 @@
 │   ├── logos/              شعارات المنصات
 │   ├── reports/            صور التقارير والإنفوجرافيك
 │   └── uploads/            الصور المرفوعة من لوحة التحكم (تُنشأ تلقائياً)
-└── favicon.svg
+├── favicon.svg           الشعار (أيقونة المتصفح)
+├── og-image.png          صورة معاينة الرابط عند مشاركته (1200×630)
+├── apple-touch-icon.png, icon-192.png, icon-512.png, site.webmanifest
+└── CNAME                 النطاق: ecommercetoolkit.hussain-al-hajji.com
 ```
 
 ## التشغيل على جهازك

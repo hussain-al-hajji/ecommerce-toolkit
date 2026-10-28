@@ -42,7 +42,7 @@
   function frame() {
     const s = DATA.site;
     document.title = s.name + ' — ' + s.tagline.replace(/\.$/, '');
-    $('#brand-name').textContent = s.name;
+    $('#brand-name').innerHTML = wordmark(s.name);
     $$('.brand-mark').forEach((el) => (el.innerHTML = LOGO));
     $$('[data-icon]').forEach((el) => (el.outerHTML = icon(el.dataset.icon)));
     $('#suggest-top').href = s.suggest.url;
@@ -64,7 +64,7 @@
       <div class="wrap">
         <div class="foot-grid">
           <div class="foot-about">
-            <a class="brand" href="#/"><span class="brand-mark">${LOGO}</span><span class="brand-text"><strong>${esc(s.name)}</strong><small>E‑Commerce Toolkit</small></span></a>
+            <a class="brand" href="#/"><span class="brand-mark">${LOGO}</span><span class="brand-text"><strong>${wordmark(s.name)}</strong><small>E‑Commerce Toolkit</small></span></a>
             <p>${esc(s.intro[0] || '')}</p>
             <div class="socials" style="margin-top:18px">${socials(s.author.socials)}</div>
           </div>
@@ -77,6 +77,14 @@
           <span><a href="${href(s.suggest.url)}" target="_blank" rel="noopener">${esc(s.suggest.label)}</a> · <a href="${href(s.readiness.url)}" target="_blank" rel="noopener">${esc(s.readiness.label)}</a></span>
         </div>
       </div>`;
+  }
+
+  // تلوين الكلمة الأخيرة من اسم الموقع
+  function wordmark(name) {
+    const parts = String(name).trim().split(/\s+/);
+    if (parts.length < 2) return esc(name);
+    const last = parts.pop();
+    return esc(parts.join(' ')) + ' <span>' + esc(last) + '</span>';
   }
 
   function socials(list) {

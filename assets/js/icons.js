@@ -66,14 +66,13 @@
     github: '<path d="M9 19.5c-4 1.2-4-2-5.5-2.5M14.5 21.5v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.5-1.3 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6 3.1 5 3.4 5 3.4a4.3 4.3 0 0 0-.1 3.2 4.6 4.6 0 0 0-1.3 3.2c0 4.7 2.8 5.7 5.5 6a3 3 0 0 0-.8 2.3v3.4"/>'
   };
 
-  // الشعار: حقيبة بمقبض وبداخلها شبكة أدوات
-  const LOGO = '<svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true">' +
-    '<path d="M17 13.5v-2.2A4.3 4.3 0 0 1 21.3 7h5.4a4.3 4.3 0 0 1 4.3 4.3v2.2" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>' +
-    '<rect x="5" y="13" width="38" height="29" rx="9" fill="currentColor"/>' +
-    '<rect x="14.5" y="20.5" width="8" height="8" rx="2.2" fill="var(--logo-accent, #F2A541)"/>' +
-    '<rect x="25.5" y="20.5" width="8" height="8" rx="2.2" fill="var(--logo-ink, #fff)" opacity=".92"/>' +
-    '<rect x="14.5" y="30.5" width="8" height="5" rx="2" fill="var(--logo-ink, #fff)" opacity=".92"/>' +
-    '<rect x="25.5" y="30.5" width="8" height="5" rx="2" fill="var(--logo-ink, #fff)" opacity=".55"/>' +
+  // الشعار: حقيبة تسوّق بمؤشر نقر — البيع عبر الإنترنت
+  const LOGO = '<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">' +
+    '<path d="M22.5 21v-4.5a9.5 9.5 0 0 1 19 0V21" fill="none" stroke="var(--logo-handle, #F2A541)" stroke-width="5" stroke-linecap="round"/>' +
+    '<path d="M13 19h38a3.4 3.4 0 0 1 3.4 3.1l2.6 30.6A6.5 6.5 0 0 1 50.5 60h-37A6.5 6.5 0 0 1 7 52.7l2.6-30.6A3.4 3.4 0 0 1 13 19Z" fill="var(--logo-body, #0B4F47)"/>' +
+    '<path d="M9.3 25.5h45.4" stroke="var(--logo-rim, #0F6A5E)" stroke-width="3"/>' +
+    '<path d="M27.5 31.5 44 38.6l-7 2.3-2.6 7z" fill="var(--logo-cursor, #fff)" stroke="var(--logo-cursor, #fff)" stroke-width="2.6" stroke-linejoin="round"/>' +
+    '<path d="M24.2 28.2l-3-3M27.6 26.4l-.6-4.1M22.4 31.6l-4.1-.6" stroke="var(--logo-handle, #F2A541)" stroke-width="2.4" stroke-linecap="round"/>' +
     '</svg>';
 
   function icon(name, cls) {
