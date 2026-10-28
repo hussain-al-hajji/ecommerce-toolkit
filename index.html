@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>حقيبة التاجر الإلكتروني — كل ما يحتاجه التاجر الإلكتروني في موقع واحد</title>
+  <meta name="description" content="دليل مجاني ومتجدد لجميع الأدوات والمنصات التي يحتاجها التاجر الإلكتروني: منصات المتاجر، الأسواق، بوابات الدفع، الشحن، التمويل، التقارير وغيرها.">
+  <meta name="theme-color" content="#0B4F47">
+  <meta property="og:title" content="حقيبة التاجر الإلكتروني">
+  <meta property="og:description" content="كل ما يحتاجه التاجر الإلكتروني، في موقع واحد.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+  <div id="preview-bar" class="preview-bar" hidden></div>
+
+  <header class="topbar" id="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="#/" aria-label="الرئيسية">
+        <span class="brand-mark" id="brand-mark"></span>
+        <span class="brand-text"><strong id="brand-name">حقيبة التاجر الإلكتروني</strong><small>E‑Commerce Toolkit</small></span>
+      </a>
+      <nav class="nav" aria-label="القائمة الرئيسية">
+        <a href="#/" data-nav="home">الرئيسية</a>
+        <button class="nav-btn" id="cats-toggle" aria-expanded="false" aria-controls="mega">الأقسام <span data-icon="chevronDown"></span></button>
+        <a href="#/c/reports" data-nav="reports">التقارير</a>
+        <a href="#/about" data-nav="about">عن الحقيبة</a>
+      </nav>
+      <div class="topbar-actions">
+        <button class="icon-btn search-trigger" id="search-open" aria-label="بحث">
+          <span data-icon="search"></span><span class="search-hint">ابحث في الحقيبة</span><kbd>/</kbd>
+        </button>
+        <a class="btn btn-accent btn-sm hide-sm" id="suggest-top" href="#" target="_blank" rel="noopener">اقترح موقع</a>
+        <button class="icon-btn menu-btn" id="menu-open" aria-label="القائمة"><span data-icon="menu"></span></button>
+      </div>
+    </div>
+    <div class="mega" id="mega" hidden>
+      <div class="wrap mega-grid" id="mega-grid"></div>
+    </div>
+  </header>
+
+  <aside class="drawer" id="drawer" hidden>
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <strong>الأقسام</strong>
+        <button class="icon-btn" id="menu-close" aria-label="إغلاق"><span data-icon="close"></span></button>
+      </div>
+      <nav class="drawer-nav" id="drawer-nav"></nav>
+    </div>
+  </aside>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <div class="palette" id="palette" hidden role="dialog" aria-modal="true" aria-label="البحث">
+    <div class="palette-box">
+      <div class="palette-input">
+        <span data-icon="search"></span>
+        <input id="palette-q" type="search" placeholder="ابحث عن منصة أو أداة أو خدمة…" autocomplete="off">
+        <button class="esc" id="palette-close">إغلاق</button>
+      </div>
+      <div class="palette-results" id="palette-results"></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="icon-btn lb-close" aria-label="إغلاق"><span data-icon="close"></span></button>
+    <button class="icon-btn lb-prev" aria-label="السابق"><span data-icon="arrowNext"></span></button>
+    <img alt="">
+    <button class="icon-btn lb-next" aria-label="التالي"><span data-icon="arrow"></span></button>
+  </div>
+
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

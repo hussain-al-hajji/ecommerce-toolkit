@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>لوحة التحكم — حقيبة التاجر الإلكتروني</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body class="admin">
+  <!-- شاشة الدخول -->
+  <section class="gate" id="gate" hidden>
+    <div class="gate-card">
+      <div class="gate-brand"><span class="brand-mark" data-logo></span><div><strong>لوحة التحكم</strong><small>حقيبة التاجر الإلكتروني</small></div></div>
+      <p class="gate-lead">تُحفظ تعديلاتك أولاً كمسودة على هذا الجهاز، ثم تُنشر إلى الموقع عبر مستودع GitHub الخاص بك.</p>
+      <form id="gate-form" class="form">
+        <label class="field"><span>رمز الوصول (GitHub Token)</span>
+          <input type="password" name="token" placeholder="github_pat_…" autocomplete="off" dir="ltr">
+        </label>
+        <div class="grid-2">
+          <label class="field"><span>اسم المالك</span><input name="owner" placeholder="username" dir="ltr"></label>
+          <label class="field"><span>المستودع</span><input name="repo" placeholder="e-commerce-toolkit" dir="ltr"></label>
+        </div>
+        <label class="field"><span>الفرع</span><input name="branch" value="main" dir="ltr"></label>
+        <p class="gate-err" id="gate-err" hidden></p>
+        <button class="btn btn-primary btn-block" type="submit">الدخول وربط المستودع</button>
+        <button class="btn btn-ghost btn-block" type="button" id="gate-local">المتابعة بدون ربط (مسودة محلية فقط)</button>
+      </form>
+      <details class="help">
+        <summary>كيف أحصل على رمز الوصول؟</summary>
+        <ol>
+          <li>من GitHub افتح: Settings ← Developer settings ← Personal access tokens ← Fine‑grained tokens.</li>
+          <li>اضغط Generate new token، واختر المستودع الخاص بالموقع فقط.</li>
+          <li>من Repository permissions امنح صلاحية <b>Contents: Read and write</b>.</li>
+          <li>انسخ الرمز والصقه هنا. يُحفظ الرمز في متصفح هذا الجهاز فقط.</li>
+        </ol>
+      </details>
+    </div>
+  </section>
+
+  <!-- التطبيق -->
+  <div class="app" id="app" hidden>
+    <aside class="sidebar" id="sidebar">
+      <a class="side-brand" href="#/"><span class="brand-mark" data-logo></span><div><strong>لوحة التحكم</strong><small>حقيبة التاجر الإلكتروني</small></div></a>
+      <nav class="side-nav" id="side-nav"></nav>
+      <div class="side-foot">
+        <a class="side-link" href="../" target="_blank" rel="noopener"><span data-icon="external"></span>عرض الموقع</a>
+        <div class="conn" id="conn"></div>
+      </div>
+    </aside>
+    <div class="main">
+      <header class="bar">
+        <button class="icon-btn only-sm" id="side-toggle" aria-label="القائمة"><span data-icon="menu"></span></button>
+        <div class="bar-title" id="bar-title"></div>
+        <div class="bar-actions">
+          <span class="status" id="status"></span>
+          <a class="btn btn-ghost btn-sm" href="../?preview=1" target="_blank" rel="noopener"><span data-icon="eye"></span><span class="hide-sm">معاينة</span></a>
+          <button class="btn btn-accent btn-sm" id="publish-btn"><span data-icon="cloud"></span>نشر التغييرات</button>
+        </div>
+      </header>
+      <div class="banner" id="banner" hidden></div>
+      <main class="content" id="view"></main>
+    </div>
+  </div>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <header class="modal-head"><h3 id="modal-title"></h3><button class="icon-btn" data-close aria-label="إغلاق"><span data-icon="close"></span></button></header>
+      <div class="modal-body" id="modal-body"></div>
+      <footer class="modal-foot" id="modal-foot"></footer>
+    </div>
+  </div>
+
+  <div class="toasts" id="toasts"></div>
+
+  <script src="../assets/js/icons.js"></script>
+  <script src="../assets/js/admin.js"></script>
+</body>
+</html>
